@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IKEA - 商品詳情</title>
+  <!-- CSS 樣式與第一關完全相同 -->
+  <style>
+    body { font-family: 'Noto Sans', 'Helvetica Neue', Arial, sans-serif; margin: 0; padding: 0; background-color: #ffffff; color: #111; }
+    .header { background-color: #0058a3; color: #fbd914; padding: 15px 20px; font-size: 24px; font-weight: 900; display: flex; justify-content: space-between; align-items: center;}
+    .container { padding: 20px; max-width: 600px; margin: 0 auto; }
+    .media-container { width: 100%; background: #f5f5f5; border-radius: 4px; overflow: hidden; margin-bottom: 20px; }
+    .media-container video, .media-container img { width: 100%; display: block; }
+    .product-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 10px; }
+    .product-name { font-size: 32px; font-weight: 900; margin: 0; text-transform: uppercase; }
+    .product-sub { font-size: 16px; color: #484848; margin-top: 5px; }
+    .price-tag { background-color: #fbd914; display: inline-block; padding: 5px 15px; font-size: 28px; font-weight: 900; margin-bottom: 20px; }
+    .description { font-size: 16px; line-height: 1.6; margin-bottom: 30px; border-top: 1px solid #dfdfdf; padding-top: 20px; }
+    .highlight { color: #e0000f; font-weight: bold; } /* 終點用紅色特別標示 */
+  </style>
+</head>
+<body>
+  <div class="header"><span>IKEA</span><span style="font-size: 16px; font-weight: normal; color: white;">最終驚喜</span></div>
+  <div class="container">
+    <div class="media-container">
+      <!-- 這裡放女兒的電子卡片或影片 -->
+      <img src="女兒卡片檔名.jpg" alt="最愛的寶貝">
+    </div>
+    <div class="product-header">
+      <div>
+        <h1 class="product-name">LILLA ÄNGEL</h1>
+        <div class="product-sub">抗寒企鵝 / 內建無限抱抱</div>
+      </div>
+    </div>
+    <div class="price-tag">$ 0 (無價)</div>
+    <div class="description">
+      <p><b>產品描述：</b><br>成分：100% 貼心與調皮。這隻企鵝不僅抗寒，還裝滿了寶貝女兒對媽咪的愛。恭喜妳找到了這裡，尋寶遊戲即將迎來大結局！</p>
+      <p><b>🎉 最終任務：</b><br>媽咪生日快樂！企鵝說妳走得有點累了，肚子應該也餓了吧？我們已經準備好了！快點走出來到 <span class="highlight">「瑞典餐廳」</span> 的角落找我們吧！</p>
+    </div>
+  </div>
+</body>
+</html>

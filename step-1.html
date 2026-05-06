@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IKEA - 商品詳情</title>
+  <style>
+    body { font-family: 'Noto Sans', 'Helvetica Neue', Arial, sans-serif; margin: 0; padding: 0; background-color: #ffffff; color: #111; }
+    .header { background-color: #0058a3; color: #fbd914; padding: 15px 20px; font-size: 24px; font-weight: 900; display: flex; justify-content: space-between; align-items: center;}
+    .container { padding: 20px; max-width: 600px; margin: 0 auto; }
+    .media-container { width: 100%; background: #f5f5f5; border-radius: 4px; overflow: hidden; margin-bottom: 20px; }
+    .media-container video, .media-container img { width: 100%; display: block; }
+    .product-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 10px; }
+    .product-name { font-size: 32px; font-weight: 900; margin: 0; text-transform: uppercase; }
+    .product-sub { font-size: 16px; color: #484848; margin-top: 5px; }
+    .price-tag { background-color: #fbd914; display: inline-block; padding: 5px 15px; font-size: 28px; font-weight: 900; margin-bottom: 20px; }
+    .description { font-size: 16px; line-height: 1.6; margin-bottom: 30px; border-top: 1px solid #dfdfdf; padding-top: 20px; }
+    .highlight { color: #0058a3; font-weight: bold; }
+  </style>
+</head>
+<body>
+  <div class="header"><span>IKEA</span><span style="font-size: 16px; font-weight: normal; color: white;">生日尋寶啟動</span></div>
+  <div class="container">
+    <div class="media-container">
+      <!-- 這裡放你的開場影片 -->
+      <video controls>
+        <source src="你的開場影片檔名.mp4" type="video/mp4">
+      </video>
+    </div>
+    <div class="product-header">
+      <div>
+        <h1 class="product-name">LYSSTJÄRNA</h1>
+        <div class="product-sub">溫暖光源 / 專屬刺繡神隊友</div>
+      </div>
+    </div>
+    <div class="price-tag">$ 520</div>
+    <div class="description">
+      <p><b>產品描述：</b><br>材質：100% 溫暖光線。這款燈具不僅能照亮客廳，更是妳每晚穿針引線、創造藝術時最可靠的夥伴。注意：請勿長時間直視，以免被老公的愛意閃瞎。</p>
+      <p><b>🕵️ 下一步指示：</b><br>有了完美的光線，接下來需要一塊能讓妳大展身手的「畫布」。請前往充滿色彩與柔軟觸感的 <span class="highlight">「臥室展示區」</span>，尋找那些可以讓妳繡上新圖案的方形小天地吧！</p>
+    </div>
+  </div>
+</body>
+</html>
