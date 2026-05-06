@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IKEA - 商品詳情</title>
+  <style>
+    /* 模仿 IKEA 簡潔風格與字體 */
+    body { font-family: 'Noto Sans', 'Helvetica Neue', Arial, sans-serif; margin: 0; padding: 0; background-color: #ffffff; color: #111; }
+    /* 頂部藍色導覽列 */
+    .header { background-color: #0058a3; color: #fbd914; padding: 15px 20px; font-size: 24px; font-weight: 900; letter-spacing: 1px; display: flex; justify-content: space-between; align-items: center;}
+    .container { padding: 20px; max-width: 600px; margin: 0 auto; }
+    /* 影片或照片區塊 */
+    .media-container { width: 100%; background: #f5f5f5; border-radius: 4px; overflow: hidden; margin-bottom: 20px; }
+    .media-container video, .media-container img { width: 100%; display: block; }
+    /* 商品資訊區塊 */
+    .product-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 10px; }
+    .product-name { font-size: 32px; font-weight: 900; margin: 0; text-transform: uppercase; }
+    .product-sub { font-size: 16px; color: #484848; margin-top: 5px; }
+    /* 經典黃色價格標籤 */
+    .price-tag { background-color: #fbd914; display: inline-block; padding: 5px 15px; font-size: 28px; font-weight: 900; margin-bottom: 20px; }
+    /* 內容描述區 */
+    .description { font-size: 16px; line-height: 1.6; margin-bottom: 30px; border-top: 1px solid #dfdfdf; padding-top: 20px; }
+    /* 模仿加入購物車按鈕 */
+    .action-button { background-color: #0058a3; color: #ffffff; text-decoration: none; display: block; text-align: center; padding: 18px; border-radius: 64px; font-size: 16px; font-weight: bold; transition: background 0.3s; }
+    .action-button:hover { background-color: #004a87; }
+  </style>
+</head>
+<body>
+
+  <!-- 頂部 Header -->
+  <div class="header">
+    <span>IKEA</span>
+    <span style="font-size: 16px; font-weight: normal; color: white;">商品詳情</span>
+  </div>
+
+  <div class="container">
+    <!-- 這裡放入你錄製的開場影片 -->
+    <div class="media-container">
+      <!-- 如果要放照片，可以把 video 標籤換成 <img src="你的照片網址.jpg" alt="回憶照片"> -->
+      <video controls poster="影片封面圖的網址或相對路徑.jpg">
+        <source src="你的影片網址或相對路徑.mp4" type="video/mp4">
+        您的瀏覽器不支援影片播放。
+      </video>
+    </div>
+
+    <!-- 商品名稱與價格 -->
+    <div class="product-header">
+      <div>
+        <h1 class="product-name">ÄLSKLING</h1>
+        <div class="product-sub">無價回憶製造機 / 限量生日特仕版</div>
+      </div>
+    </div>
+    <div class="price-tag">$ 518</div>
+
+    <!-- 謎題與描述內容 -->
+    <div class="description">
+      <p><b>產品描述：</b><br>請點擊上方影片，查收今年的第一道生日驚喜！這款產品經過精密測試，具備極高的包容力，是居家旅行必備良伴。</p>
+      <p><b>下一步指示：</b><br>看影片後，請前往「<b>客廳沙發區</b>」，尋找下一個奇怪的商品標籤。</p>
+    </div>
+
+    <!-- 前往下一關的按鈕 (可選) -->
+    <a href="下一關的網址(如果有的話)" class="action-button">點我領取下一關提示線索 ➔</a>
+  </div>
+
+</body>
+</html>
