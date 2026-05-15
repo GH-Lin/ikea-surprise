@@ -8,8 +8,47 @@
     body { font-family: 'Noto Sans', 'Helvetica Neue', Arial, sans-serif; margin: 0; padding: 0; background-color: #ffffff; color: #111; }
     .header { background-color: #0058a3; color: #fbd914; padding: 15px 20px; font-size: 24px; font-weight: 900; display: flex; justify-content: space-between; align-items: center;}
     .container { padding: 20px; max-width: 600px; margin: 0 auto; }
-    .media-container { width: 100%; background: #f5f5f5; border-radius: 4px; overflow: hidden; margin-bottom: 20px; }
-    .media-container video, .media-container img { width: 100%; display: block; }
+    
+    /* 這裡是你專屬的數位黑卡 CSS 設計 */
+    .black-card-container { margin-bottom: 25px; perspective: 1000px; }
+    .black-card {
+      background: linear-gradient(135deg, #2c2c2c 0%, #111111 50%, #000000 100%);
+      border: 1px solid #444;
+      border-radius: 16px;
+      padding: 25px;
+      color: #d4af37; /* 經典黑卡燙金字 */
+      box-shadow: 0 15px 35px rgba(0,0,0,0.5);
+      font-family: 'Courier New', Courier, monospace;
+      position: relative;
+      overflow: hidden;
+    }
+    /* 黑卡金屬反光特效 */
+    .black-card::after {
+      content: ''; position: absolute; top: -50%; left: -50%; width: 200%; height: 200%;
+      background: linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(255,255,255,0.08) 50%, rgba(255,255,255,0) 100%);
+      transform: rotate(30deg); pointer-events: none;
+    }
+    .card-chip {
+      width: 45px; height: 35px;
+      background: linear-gradient(135deg, #d4af37 0%, #aa8c2c 100%);
+      border-radius: 6px; margin-bottom: 20px; position: relative;
+    }
+    .card-chip::before { content: ''; position: absolute; top: 12px; left: 0; right: 0; height: 1px; background: rgba(0,0,0,0.3); }
+    .card-chip::after { content: ''; position: absolute; top: 23px; left: 0; right: 0; height: 1px; background: rgba(0,0,0,0.3); }
+    
+    .card-type { position: absolute; top: 25px; right: 25px; font-weight: 900; font-family: 'Noto Sans', sans-serif; letter-spacing: 2px; font-style: italic;}
+    .card-number { font-size: 24px; letter-spacing: 3px; margin-bottom: 20px; text-shadow: 1px 1px 2px rgba(0,0,0,0.8); }
+    .card-details { display: flex; justify-content: space-between; margin-bottom: 15px; }
+    .card-label { font-size: 10px; opacity: 0.8; margin-bottom: 5px; font-family: 'Noto Sans', sans-serif; letter-spacing: 1px; }
+    .card-name { font-size: 16px; letter-spacing: 2px; font-weight: bold; }
+    
+    /* 美食清單區塊 */
+    .food-icons {
+      margin-top: 15px; border-top: 1px dashed rgba(212, 175, 55, 0.4); padding-top: 15px;
+      font-size: 14px; font-family: 'Noto Sans', sans-serif; text-align: center; line-height: 1.8; color: #ebd171; font-weight: bold;
+    }
+
+    /* 以下為原有的 IKEA 樣式 */
     .product-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 10px; }
     .product-name { font-size: 32px; font-weight: 900; margin: 0; text-transform: uppercase; }
     .product-sub { font-size: 16px; color: #484848; margin-top: 5px; }
@@ -20,31 +59,52 @@
   </style>
 </head>
 <body>
-  <div class="header"><span>IKEA</span><span style="font-size: 16px; font-weight: normal; color: white;">驚喜進度 3/5</span></div>
+  <div class="header"><span>IKEA</span><span style="font-size: 16px; font-weight: normal; color: white;">驚喜進度 4/5</span></div>
   <div class="container">
-    <div class="media-container">
-      <img src="Jadeite_Cabbage.jpg" alt="專屬刺繡神隊友">
-    </div>
     
-    <div class="product-header">
-      <div>
-        <h1 class="product-name">LYSSTJÄRNA</h1>
-        <div class="product-sub">溫暖光源 / 專屬刺繡神隊友</div>
+    <!-- 數位黑卡區塊開始 -->
+    <div class="black-card-container">
+      <div class="black-card">
+        <div class="card-chip"></div>
+        <div class="card-type">HUSBAND PAY</div>
+        <!-- 卡號隱藏了密碼：520一生一世 2209寢室 發發發 -->
+        <div class="card-number">0518 1020 1314 2209</div>
+        <div class="card-details">
+          <div>
+            <div class="card-label">VIP MEMBER</div>
+            <div class="card-name">WAN-YU LI</div>
+          </div>
+          <div>
+            <div class="card-label">VALID THRU</div>
+            <div class="card-name">∞</div>
+          </div>
+        </div>
+        <div class="food-icons">
+          🦀 月夜岩 頂級蟹懷石 ｜ 🥩 大腕 米其林和牛 ｜ 🥟 鼎泰豐 小籠包 <br>
+          🦆 頤宮 三星極致盛宴 ｜ 🥂 台北101 饗 A Joy ｜ 🍲 橘色涮涮屋 火鍋饗宴
+	</div>
       </div>
     </div>
-    <div class="price-tag">$ 520</div>
+    <!-- 數位黑卡區塊結束 --> 
+
+    <div class="product-header">
+      <div>
+        <h1 class="product-name">SMAKLIG</h1>
+        <div class="product-sub">黑卡級餐盤 / 老公全額買單特仕版</div>
+      </div>
+    </div>
+    <div class="price-tag">$ 1314</div>
     
     <div class="description">
       <p><b>產品描述：</b><br>
-      <b>材質：</b>100% 柔和不刺眼的光源與全心全意的支持。<br>
-      <b>功能：</b>專注照亮妳穿針引線的每一個瞬間，確保每一朵繡花都完美無瑕。<br>
-      <b>續航力：</b>擁有超越常理的耐心，就算妳一坐就是好幾個小時，它也會靜靜陪在旁邊不喊累。<br>
-      <b>保養說明：</b>燈泡若有閃爍，請記得適時放下手邊的針線活，讓眼睛休息一下，或呼喚老公遞上熱茶。<br>
-      <b>特點：</b>讓妳在夜晚盡情享受 Me Time 的絕佳利器，是每個刺繡大師的夢幻配備。<br>
-      <b>警告：</b>請勿長時間直視光源，以免被老公隱藏在光線裡的愛意閃瞎。</p>
-
+      <b>材質：</b>100% 絕對的味覺滿足、無限的卡路里額度，以及老公為妳專屬打造的魔法錢包餘額。<br>
+      <b>功能：</b>掃描此商品等同於終身綁定「老公無限刷卡機」。不管妳今天想吃米其林星級大餐、巷弄裡的隱藏版甜點，還是深夜突然嘴饞想吃萬惡的鹹酥雞，只要妳一聲令下，專屬美食外送員（老公）絕對使命必達。<br>
+      <b>專屬特權：</b>擁有此餐盤代表妳是全家最高級的 VIP。本特權包含：吃飯絕對免洗碗、點菜從來不用看價格，以及擁有「吃兩口不想吃，可以直接丟給老公解決」的絕對權利。<br>
+      <b>保養說明：</b>請盡情使用，越常使用越能激發老公的求生慾與賺錢動力。若遇到特別好吃的餐廳，請務必露出幸福的微笑，那就是對本產品最好的保養。<br>
+      <b>特點：</b>專為吃貨女王量身打造，能瞬間清空所有負能量，將卡路里完美轉化為快樂多巴胺！</p>
+      <b>警告：</b>頻繁使用本產品可能導致幸福肥。但請放心，使用本產品產生之所有卡路里與帳單，皆由老公全權負責吸收，請安心大口享用！</p>
       <p><b>🕵️ 下一步指示：</b><br>
-      有了完美的光線，接下來需要一塊能讓妳大展身手的「畫布」。請前往充滿色彩與柔軟觸感的 <span class="highlight">「臥室展示區」</span>，尋找那塊充滿創造力的方形小天地吧！</p>
+      胃口大開了嗎？在享受真正的大餐之前，有一位來自冰天雪地的神秘嘉賓已經等不及要給妳一個大大的擁抱了！快前往緊鄰著餐廳的 <span class="highlight">「兒童天地絨毛玩具區」</span>，尋找那隻熟悉的身影吧！</p>
     </div>
   </div>
 </body>
